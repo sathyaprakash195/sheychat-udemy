@@ -5,12 +5,8 @@ import UserSearch from "./components/UserSearch";
 import UsersList from "./components/UsersList";
 import { io } from "socket.io-client";
 let backendUrl = "";
-if (process.env.NODE_ENV === "development") {
-  backendUrl = "http://localhost:5000";
-} else {
-  backendUrl = "https://sheychat-udemy.onrender.com";
-}
-const socket = io('http://localhost:5000');
+
+const socket = io("https://sheychat-udemy2.onrender.com");
 function Home() {
   const [searchKey, setSearchKey] = React.useState("");
   const { selectedChat, user } = useSelector((state) => state.userReducer);
