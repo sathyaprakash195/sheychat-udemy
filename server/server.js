@@ -69,7 +69,6 @@ app.use("/api/users", usersRoute);
 app.use("/api/chats", chatsRoute);
 app.use("/api/messages", messagesRoute);
 
-
 const path = require("path");
 __dirname = path.resolve();
 // render deployment
@@ -79,5 +78,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 }
+
 
 server.listen(port, () => console.log(`Server running on port ${port}`));
